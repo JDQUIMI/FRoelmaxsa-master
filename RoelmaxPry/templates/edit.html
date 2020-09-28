@@ -1,0 +1,47 @@
+<! DOCTYPE html>
+<html lang = "en" >
+<head>
+    <meta charset = "UTF-8" >
+    <title> Índice </title>
+    {% load staticfiles%}
+    <link rel = "stylesheet"  href = "{% static 'css / style.css'%}" />
+</head>
+<body>
+<form method = "POST" class = "post-form"  action = "/update/{{usuario.id}}" >
+        {% csrf_token%}
+    <div  class = "contenedor" >
+<br>
+    <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-1 col-form-label" > </label>
+    <div  class = "col-sm-4" >
+    <h3> Detalles de la actualización </h3>
+    </div>
+  </div>
+    <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-2 col-form-label" > username: </label>
+    <div  class = "col-sm-4" >
+        <input type = "text"  name = "username"  id = "username"  required maxlength = "20"  value = "{{usuario.username}}" />
+    </div>
+  </div>
+  <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-2 col-form-label" > Password </label>
+    <div  class = "col-sm-4" >
+        <input type = "text"  name = "pass"  id = "pass"  required maxlength = "100"  value = "{{usuario.password}}"  />
+    </div>
+  </div>
+    <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-2 col-form-label" > rol </label>
+    <div  class = "col-sm-4" >
+        <input type = "rol"  name = "rol"  id = "id_rol"  required maxlength = "254"  value = "{{usuario.rol}}"  />
+    </div>
+  </div>
+    <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-1 col-form-label" > </label>
+    <div  class = "col-sm-4" >
+    <button type = "submit" class = "btn btn-success" > Actualizar </button>
+    </div>
+  </div>
+    </div>
+</form>
+</body>
+</html>

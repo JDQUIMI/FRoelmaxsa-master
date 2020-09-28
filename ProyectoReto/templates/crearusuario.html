@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+
+{% block header %}
+    <h2> Crear Usuario </h2>
+<form method = "POST" class = "post-form"  action = "{% url 'login' %}" >
+        {% csrf_token%}
+    <div  class = "contenedor" >
+<br>
+    <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-1 col-form-label" > </label>
+    <div  class = "col-sm-4" >
+    <h3> Ingrese usuario </h3>
+    </div>
+  </div>
+    <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-2 col-form-label" > Username: </label>
+    <div  class = "col-sm-4" >
+      {{form.username}}
+    </div>
+  </div>
+  <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-2 col-form-label" > Password: </label>
+    <div  class = "col-sm-4" >
+      {{form.password}}
+    </div>
+  </div>
+    <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-2 col-form-label" > rol: </label>
+    <div  class = "col-sm-4" >
+      {{form.rol}}
+    </div>
+  </div>
+
+    <div  class = "fila de grupo de formulario" >
+    <label  class = "col-sm-1 col-form-label" > </label>
+    <div  class = "col-sm-4" >
+    <button type = "submit" class = "btn btn-primary" > Enviar </button>
+    </div>
+  </div>
+    </div>
+</form>
+{% endblock %}

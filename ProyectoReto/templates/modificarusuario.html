@@ -1,0 +1,14 @@
+{% block title %} Modificar Usuario {% endblock title %}
+{% extends "base.html" %}
+
+{% block header %}
+    <h2> Modificar Usuario </h2>
+    <form method="POST" action = "{% url 'Modificarusuario' %}">
+        {% csrf_token %}
+        {{ formUsuario.as_p  }}
+
+
+        <input type="submit" value="Modificar Usuario" />
+    </form>
+{% endblock %}
+ock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block background %}{% load static %}{% static 'img/home-bg.jpg' %}{% endblock %}
+{% block header %}
+    {% if form.errors %}
+        <p>Your username and password didn't match. Prueba otra vez</p>
+    {% endif %}
+    {% if next %}
+        {% if user.is_authenticated %}
+            <p>Your account doesn't have access to this page. To proceed,
+                please login with an account that has access.</p>
+        {% else %}
+            <p>Please login to see this page.</p>
+        {% endif %}
+    {% endif %}
+    <header>Ferreteria Roelmax SA </header>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Login</h1>
+			</div>
+
+			<fom class="login-form" method="post",action=" {% url 'login' %}" background="#D8D8D8" >
+                {% csrf_token %}
+				<div class="control-group">
+                    <td>{{ form.username.label_tag }}</td>
+                    <td>{{ form.username }}</td>
+				</div>
+				<div class="control-group">
+                    <td>{{ form.password.label_tag }}</td>
+                    <td>{{ form.password }}</td>
+				</div>
+                <div class="control-group">
+				<td>{{ form.rol.label_tag }}</td>
+                    <td>{{ form.rol }}</td>
+                </div>
+				</fom>
+				<a class="btn btn-primary btn-large btn-block" href="{% url 'inicio' %}" >Ingresar</a>
+				<a class="login-link" href="http://127.0.0.1:8000/base.html">Olvidó su contraseña?</a>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% block title %} Eliminar Usuario {% endblock title %}
+{% extends "base.html" %}
+
+{% block header %}
+    <h2> Eliminar Usuario </h2>
+    <form method="POST" action = "{% url 'eliminarusuario' %}">
+        {% csrf_token %}
+        {{ formUsuario.as_p  }}
+
+
+        <input type="submit" value="eliminar Usuario" />
+    </form>
+{% endblock %}

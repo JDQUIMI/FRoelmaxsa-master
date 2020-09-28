@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ferreteria Roelmax</title>
+
+    <!-- Estilos y fuentes del template  -->
+
+    {% load static %}
+
+
+       <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+       <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+       <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+       <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+       <link href="{% static 'css/clean-blog.min.css'%}" rel="stylesheet">
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+<style>
+
+            *:focus {
+                outline: none;
+            }
+
+            body {
+            background-size: cover ;
+            text-align: left;
+            font-family: Arial;
+            background-color: #D8D8D8;
+            padding: 50px;
+            }
+             header{
+              text-align: center;
+              color: blue;
+              font-family: Elephant;
+                 font-size: 30px;
+              size: ledger;
+            }
+
+              li {
+            font-family: Forte;
+            text-align: left;
+            color: #005cbf;
+            border: 2px solid transparent;
+            border-radius: 3px;
+            font-size: 20px;
+            font-weight: 200;
+            padding: 10px 0;
+            width: 250px;
+            transition: border .5s;
+            }
+            ul {
+            font-family: Forte;
+            text-align: left;
+            color: #005cbf;
+            border: 2px solid transparent;
+            border-radius: 3px;
+            font-size: 20px;
+            font-weight: 200;
+            padding: 10px 0;
+            width: 250px;
+            transition: border .5s;
+            }
+
+            input:focus {
+            border: 2px solid #3498DB;
+            box-shadow: none;
+            }
+            select:focus {
+            border: 2px solid #3498DB;
+            box-shadow: none;
+            }
+
+            .login {
+            margin: 20px auto;
+            width: 300px;
+            }
+            .login-screen {
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 5px
+            }
+
+            .app-title {
+            text-align: center;
+            color: #777;
+            }
+
+            .login-form {
+            text-align: center;
+            }
+            .control-group {
+            margin-bottom: 10px;
+            }
+
+            input {
+            text-align: left;
+            background-color: gainsboro;
+            border: 2px solid transparent;
+            border-radius: 3px;
+            font-size: 16px;
+            font-weight: 200;
+            padding: 10px 0;
+            width: 250px;
+            transition: border .5s;
+            }
+
+            select{
+            text-align: center;
+            background-color: gainsboro;
+            border: 2px solid transparent;
+            border-radius: 3px;
+            font-size: 16px;
+            font-weight: 200;
+            padding: 10px 0;
+            width: 250px;
+            transition: border .5s;
+            }
+            select:focus {
+            border: 2px solid #3498DB;
+            box-shadow: none;
+            }
+
+            .btn {
+              border: 2px solid transparent;
+              background: #3498DB;
+              color: #ffffff;
+              font-size: 16px;
+              line-height: 25px;
+              padding: 10px 0;
+              text-decoration: none;
+              text-shadow: none;
+              border-radius: 3px;
+              box-shadow: none;
+              transition: 0.25s;
+              display: block;
+              width: 250px;
+              margin: 0 auto;
+            }
+
+            .btn:hover {
+              background-color: #2980B9;
+            }
+
+            .login-link {
+              font-size: 12px;
+              color: #444;
+              display: block;
+                margin-top: 12px;
+            }
+            button{
+                border: 2px solid transparent;
+              background: #3498DB;
+              color: #ffffff;
+              font-size: 16px;
+              line-height: 25px;
+              padding: 10px 0;
+              text-decoration: none;
+              text-shadow: none;
+              border-radius: 3px;
+              box-shadow: none;
+              transition: 0.25s;
+              display: block;
+              width: 250px;
+              margin: 0 auto;
+            }
+            th{
+                text-align: center;
+            }
+</style>
+ <!-- Bootstrap y Javascripts -->
+    {% load static %}
+    <script src="{%  static 'vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{%  static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%  static ' js/clean-blog.min.js'%}"></script>
+
+</html>
